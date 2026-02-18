@@ -1,0 +1,81 @@
+/*NAVBAR STIL*/
+.logo {
+    width: 400px;
+    height: 60px;
+}
+
+.navigacija{
+    background-color: #202020;
+}
+
+.nav-link{
+    color: #ffffff;
+    font-size: 14pt;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link.active{ /*Mora specificno zbog prioriteta browsera, koja glupost*/
+    color: #c6bf9f;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color: #c6bf9f;
+}
+
+.fa-solid{
+    font-size: 17pt;
+}
+
+.navbar-nav .nav-item .nav-link .zadnji{
+    margin-right: 0px;
+}
+
+/*FOOTER STIL*/
+
+footer, .footer-containers, .footer-container{
+    background-color: #202020;
+    text-align: center;
+    color: white;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-left{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-columns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
+.footer-column{
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: #dddddd;    
+}
+
+.footer-link:hover {
+    color: #c6bf9f;
+}
+
+.copyright, .copyright .fa-solid{
+    font-size: 11pt;
+}
