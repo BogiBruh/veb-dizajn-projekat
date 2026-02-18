@@ -76,6 +76,58 @@ footer, .footer-containers, .footer-container{
     color: #c6bf9f;
 }
 
+.footer-column .footer-link.active{
+    color: #c6bf9f;
+}
+
 .copyright, .copyright .fa-solid{
     font-size: 11pt;
+}
+
+/*STIL SAMIH STRANICA*/
+
+.banner{
+    background-image: url("../img/banner.jpg");
+    background-position: center 35%;
+    width: 100%;
+    height: 600px;
+}
+
+.klasa{
+    height: 600px;
+    border: 1px solid black;
+}
+
+/*.klasa .slika{
+    width: 100%;
+}*/
+
+.btnIgre{
+    /*background-color: #c6bf9f;*/
+    border-color: #c6bf9f;
+    border: 2px solid #c6bf9f;
+    color: #c6bf9f;
+}
+
+.btnIgre:hover{
+    background-color: #c6bf9f;
+    border: 2px solid #c6bf9f;
+}
+
+.igra{
+    /*height: 400px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.igra:hover{
+    cursor: pointer;
+    background-color: #b4b4b4;
+    color: #c6bf9f;
+}
+
+.igra .boxart{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
