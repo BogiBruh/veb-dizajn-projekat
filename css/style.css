@@ -1,3 +1,7 @@
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 /*NAVBAR STIL*/
 .logo {
     width: 400px;
@@ -130,4 +134,26 @@ footer, .footer-containers, .footer-container{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.slikaKorpa{
+    width: 130px;
+    height: 180px;
+}
+
+.listaKorpa{
+    list-style-type: none;
+}
+
+.izbaci{
+    color: black;
+}
+
+.izbaci:hover{
+    color: #c6bf9f;
+}
+
+.legalanLink{
+    color: #c6bf9f;
+    text-decoration: none;
 }

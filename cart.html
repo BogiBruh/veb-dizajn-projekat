@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <script src="boostrap/bootstrap.js"></script>
+    <script src="boostrap/bootstrap.bundle.js"></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!--Navstart-->
     <nav class="navbar navbar-expand-lg navigacija">
         <div class="container-fluid">
@@ -36,9 +37,6 @@
                     <li class="nav-item">
                        <a href="onama.html" class="nav-link">O nama</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lore.html">Pročitaj više</a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav me-5">
                     <li class="nav-item">
@@ -58,11 +56,71 @@
     <!--Navend-->
 
     <div class="container">
-        <p>Hello World!</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Tvoja korpa:</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="img/tes3/box.png" alt="morrowind" class="slikaKorpa  mx-auto d-block">
+            </div>
+            <div class="col-lg-3">
+                <ul class="listaKorpa">
+                    <li>
+                        <b>The Elder Scrolls 3: Morrowind</b>
+                    </li>
+                    <li>
+                        Bethesda Studio, Zenimax inc.
+                    </li>
+                    <li>
+                        2002
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 text-end">
+                <h5>14.99€</h5>
+            </div>
+            <div class="col-lg-3 text-end">
+                <a href="#" data-bs-toggle="tooltip" data-bs-title="Izbacite iz korpe" class="izbaci">
+                    <i class="fa-solid fa-xmark kensl"></i>
+                </a>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 text-end">
+                Za platiti:
+            </div>
+            <div class="col-lg-3 text-end">
+                <ul class="listaKorpa">
+                    <li>Cena: 14.99€</li>
+                    <li>Porez 10%:&nbsp;&nbsp;&nbsp;1.49€</li>
+                    <li>
+                        <b>Konačna cena: 16.48€</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="checkbox" id="cekboks"> Slažem se sa <a href="#" class="legalanLink">Politikom Privatnosti</a> i <a href="#" class="legalanLink">EULA</a>
+            </div>
+            <div class="col-lg-3 text-end">
+                
+            </div>
+            <div class="col-lg-3 text-end">
+                <button class="btn btn-outline-primary btnIgre" onclick="location.href = 'igre.html'">Vrati se na katalog</button>
+                <button class="btn btn-primary brnIgre" onclick="provera()">Kupi</button>
+            </div>
+        </div>
     </div>
+    <br>
 
     <!--footstart-->
-    <footer>
+    <footer class="py-3 mt-auto w-100">
         <div class="footer-container">
             <div class="footer-columns">
                 <div class="footer-column">
@@ -102,5 +160,19 @@
         </div>
     </footer>
     <!--foootend-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        function provera(){
+            var cekboks = document.getElementById("cekboks");
+            if(cekboks.checked){
+                window.location.href = "uspesnaKupovina.html";
+            }
+            else{
+                alert("Da biste izvršili kupovinu morate da prihvatite uslove.");
+            }
+        }
+    </script>
 </body>
 </html>
