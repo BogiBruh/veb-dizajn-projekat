@@ -153,7 +153,54 @@ footer, .footer-containers, .footer-container{
     color: #c6bf9f;
 }
 
+/*.form-check-input-checked-color{
+    background-color: #c6bf9f;
+}*/
+
 .legalanLink{
     color: #c6bf9f;
     text-decoration: none;
+}
+
+.profilna{
+    font-size: 50pt;
+}
+
+.userControls{
+    background-color: #f8f8f8;
+    border-right: 1px solid black;
+}
+
+.userControlList{
+    list-style-type: none;
+    color: #c6bf9f;
+    text-decoration: none;
+}
+
+.teskaPodesavanja{
+    color: red;
+}
+
+.slikaNalog{
+    width: 100px;
+    height: 140px;
+}
+
+.disejbld{
+    opacity: 0.5;
+}
+
+.btnFull:hover{
+    background-color: #c6bf9f;
+    border-color: #c6bf9f;
+}
+
+.racunHeader{
+    margin: 0;
+}
+
+.infoIgra{
+    list-style-type: none;
+    /*background-color: #202020;
+    color: white;*/
 }

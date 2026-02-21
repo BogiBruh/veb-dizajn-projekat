@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <script src="boostrap/bootstrap.js"></script>
+    <script src="boostrap/bootstrap.bundle.js"></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!--Navstart-->
     <nav class="navbar navbar-expand-lg navigacija">
         <div class="container-fluid">
@@ -53,13 +54,254 @@
         </div>
     </nav>
     <!--Navend-->
-
+    <br>
     <div class="container">
-        <p>Hello World!</p>
+        <div class="row">
+            <div class="col-lg-1">
+                <i class="fa-solid fa-circle-user profilna"></i>
+            </div>
+            <div class="col-lg-11 d-flex align-items-center">
+                <h2>PetarPetrovic1</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3 userControls">
+                <ul class="userControlList">
+                    <li>
+                        <a href="#" class="legalanLink" onclick="prikaziTab(1)">
+                            <i class="fa-solid fa-user"></i> Podešavanje profila
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="legalanLink" onclick="prikaziTab(2)">
+                            <i class="fa-solid fa-download"></i> Tvoje igre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="legalanLink" onclick="prikaziTab(3)">
+                            <i class="fa-solid fa-file-invoice-dollar"></i> Tvoji fiskalni računi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="legalanLink" onclick="prikaziTab(4)">
+                            <i class="fa-solid fa-wallet"></i> Korisnički račun
+                        </a>
+                    </li>
+                    <li class="teskaPodesavanja">
+                        <a href="#" class="legalanLink teskaPodesavanja" onclick="prikaziTab(5)">
+                            <i class="fa-solid fa-gear"></i> Teška podešavanja
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 userSettings">
+                <div class="podesavanja" id="1"> <!--Korisnicka podesavanja-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Podešavanje profila</h4>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            Korisničko ime
+                        </div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3">
+                            <input type="text" value="PetarPetrovic1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            Lozinka
+                        </div>
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-3 d-flex align-items-right">
+                            <input type="password" value="VDProjekatFebruarNRT2323" disabled>
+                        </div>
+                    </div>
+                    <div class="row"> <!--Prazan row, za dugme-->
+                        <div class="col-lg-9"></div>
+                        <div class="col-lg-3 text-end">
+                            <button class="btn btn-primary btnFull">Promeni Lozinku</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Uključi podešavanja
+                        </div>
+                        <div class="col-lg-7"></div> <!--Neiskoriscen prostor-->
+                        <div class="col-lg-1">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="radio" role="switch" name="neZnamStaDaStavim" checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Isključi podešavanja
+                        </div>
+                        <div class="col-lg-7"></div> <!--Neiskoriscen prostor-->
+                        <div class="col-lg-1">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="radio" role="switch" name="neZnamStaDaStavim">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p class="disejbld">Ne znam, nikad nisam video podešavanja</p>
+                        </div>
+                        <div class="col-lg-7"></div> <!--Neiskoriscen prostor-->
+                        <div class="col-lg-1">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDisabled" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row text-end">
+                        <div class="col-lg-12">
+                            <button class="btn btn-outline-primary btnIgre">Sačuvaj promene</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="podesavanja d-none" id="2"> <!--download sekcija-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Tvoje igre:</h4>
+                            <hr>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/tes3/box.png" alt="morrowind" class="slikaNalog  mx-auto d-block">
+                        </div>
+                        <div class="col-lg-8">
+                            <ul class="listaKorpa">
+                                <li>
+                                    <b>The Elder Scrolls 3: Morrowind</b>
+                                </li>
+                                <li>
+                                    Bethesda Studio, Zenimax inc.
+                                </li>
+                                <li>
+                                    2002.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-1 d-flex align-items-center">
+                           <a href="downloads/tes3.txt" data-bs-toggle="tooltip" data-bs-title="Skinite igru" class="izbaci">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                        </div>
+                        <br>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="img/tes1/box.jpg" alt="Arena" class="slikaNalog  mx-auto d-block">
+                        </div>
+                        <div class="col-lg-8">
+                            <ul class="listaKorpa">
+                                <li>
+                                    <b>The Elder Scrolls: Arena</b>
+                                </li>
+                                <li>
+                                    Bethesda Studio
+                                </li>
+                                <li>
+                                    1994.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-1 d-flex align-items-center">
+                           <a href="downloads/tes1.txt" data-bs-toggle="tooltip" data-bs-title="Skinite igru" class="izbaci">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                        </div>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+                <div class="podesavanja d-none" id="3"> <!--Racuni-->
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="img/tes3/box.png" alt="morrowind" class="slikaNalog  mx-auto d-block">
+                        </div>
+                        <div class="col-lg-3">
+                            <ul class="listaKorpa">
+                                <li>
+                                    <b>The Elder Scrolls 3: Morrowind</b>
+                                </li>
+                                <li>
+                                    Bethesda Studio, Zenimax inc.
+                                </li>
+                                <li>
+                                    2002
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 text-center">
+                            <h5>14.99€</h5>
+                        </div>
+                        <div class="col-lg-3 text-center">
+                            <p><b>Datum Kupovine</b></p>
+                            <p>20.2.2026.</p>
+                        </div>
+                        <div class="col-lg-1 d-flex align-items-center">
+                            <a href="racun.html" data-bs-toggle="tooltip" data-bs-title="Štampajte račun" class="izbaci">
+                                <i class="fa-solid fa-print"></i>
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="podesavanja d-none" id="4"> <!--Korisnicki racun-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Vaš korisnički račun:</h4>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 d-flex align-items-center">
+                            <b>Stanje Računa</b>
+                        </div>
+                        <div class="col-lg-2 text-right">
+                            3.52€
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p>Vaša kartica:</p> <br>
+                            <p><i class="fa-brands fa-cc-visa"></i> 5062 **** **** **** **49</p> <br>
+                            <button class="btn btn-primary btnFull">Promenite Karticu</button>
+                        </div>
+                        <div class="col-lg-5"></div>
+                        <div class="col-lg-3">
+                            <button class="btn btn-primary btnFull">Dodaj pare na račun</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="podesavanja d-none" id="5"> <!--izbrisi profil-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Teška podesavanja</h4>
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn btn-outline-danger">Izbrišite vaš profil(nepovratno)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <br>
 
     <!--footstart-->
-    <footer>
+    <footer class="py-3 mt-auto w-100">
         <div class="footer-container">
             <div class="footer-columns">
                 <div class="footer-column">
@@ -73,7 +315,7 @@
                 </div>
                 <div class="footer-column">
                     <h4>Sekcija za korisnike</h4>
-                    <a href="nalog.html" class="footer-link">Korisnički nalog</a> <br>
+                    <a href="nalog.html" class="footer-link active">Korisnički nalog</a> <br>
                     <a href="cart.html" class="footer-link">Korpa</a> <br>
                     <a href="mapasajta.html" class="footer-link">Mapa Sajta</a> <br>
                     <a href="faq.html" class="footer-link">FAQ</a>
@@ -99,5 +341,18 @@
         </div>
     </footer>
     <!--foootend-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        function prikaziTab(brTaba) {
+            var tabovi = document.querySelectorAll('.podesavanja');
+            tabovi.forEach(tabovi => {
+                tabovi.classList.add('d-none');
+            });
+
+            document.getElementById(brTaba).classList.remove('d-none');
+        }
+    </script>
 </body>
 </html>

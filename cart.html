@@ -106,14 +106,17 @@
         <hr>
         <div class="row">
             <div class="col-lg-6">
-                <input type="checkbox" id="cekboks"> Slažem se sa <a href="#" class="legalanLink">Politikom Privatnosti</a> i <a href="#" class="legalanLink">EULA</a>
+                <input type="checkbox" id="cekboks" class="form-check-input"> 
+                <label for="cekboks">
+                    Slažem se sa <a href="#" class="legalanLink">Politikom Privatnosti</a> i <a href="#" class="legalanLink">EULA</a>
+                </label>
             </div>
             <div class="col-lg-3 text-end">
                 
             </div>
             <div class="col-lg-3 text-end">
                 <button class="btn btn-outline-primary btnIgre" onclick="location.href = 'igre.html'">Vrati se na katalog</button>
-                <button class="btn btn-primary brnIgre" onclick="provera()">Kupi</button>
+                <button class="btn btn-primary btnFull" onclick="provera()">Kupi</button>
             </div>
         </div>
     </div>
@@ -135,7 +138,7 @@
                 <div class="footer-column">
                     <h4>Sekcija za korisnike</h4>
                     <a href="nalog.html" class="footer-link">Korisnički nalog</a> <br>
-                    <a href="cart.html" class="footer-link">Korpa</a> <br>
+                    <a href="cart.html" class="footer-link active">Korpa</a> <br>
                     <a href="mapasajta.html" class="footer-link">Mapa Sajta</a> <br>
                     <a href="faq.html" class="footer-link">FAQ</a>
                 </div>
