@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <script src="boostrap/bootstrap.js"></script>
+    <script src="boostrap/bootstrap.bundle.js"></script>
 </head>
 <body>
     <!--Navstart-->
@@ -22,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active aktivan" aria-current="page" href="index.html">Početna</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Početna</a>
                     </li>
                     <li class="nav-item">
                        <a href="igre.html" class="nav-link">Igre</a>
@@ -55,8 +56,61 @@
     <!--Navend-->
 
     <div class="container">
-        <p>Hello World!</p>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Kontaktirajte nas</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>Vaše iskustvo nam je jako bitno. Ako imate problema sa nekim našim proizvodima, ili iskustvom na sajtu, obratite nam se preko ovog formulara,
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@bethesda.com" target="_blank" class="legalanLink">našeg mejla direktno</a>  ili
+                    uživo, na lokaciji prikazanoj na dnu strane. 
+                </p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <form action="poslatiPodaci.html">
+                <h5>Razlog za kontaktiranje</h5>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle razlog" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdaun">Izaberite razlog</button>
+                    <ul class="dropdown-menu razlog">
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(1)" id="selekcija1">Igra mi se ne pokreće!</a></li>
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(2)" id="selekcija2">Igra radi neko vreme, ali zatim krešuje!</a></li>
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(3)" id="selekcija3">Igra je dosadna! Imam ideje kako da se urade bolje!</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(4)" id="selekcija4">Sajt vam je krš!</a></li>
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(5)" id="selekcija5">Određene strane sajta se ne učitavaju!</a></li>
+                        <li><a class="dropdown-item razlog" href="#" onclick="prikaziSelekciju(6)" id="selekcija6">Ne mogu da kupim nijednu igru!</a></li>
+                    </ul>
+                </div> 
+                <h5>Ime i Prezime</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Petar Petrović" required>
+                </div> 
+                <h5>Vaš imejl(tu ćete dobiti odgovor)</h5>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="primer@gmail.com" required>
+                </div> 
+                <h5>Dodatan tekst </h5>
+                <div class="input-group mb-3">
+                    <textarea name="komentar" id="komentar" class="form-control" rows="10" placeholder="Ovde možete upisati vaš komentar. Nije obavezno, ali će pomoći i nama i vama da imate odlično iskustvo sa korisničkom podrškom"></textarea>
+                </div>
+                <input type="submit" class="btn btn-outline-primary btnIgre" value="Pošalji feedback">
+            </form>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847.7372171861855!2d20.433843569664777!3d44.744395950717376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7193ac73a6e5%3A0xe172e1dad2c8c5d2!2z0KHRgtC10LLQsNC90LAg0JvRg9C60L7QstC40ZvQsCAyLCDQkdC10L7Qs9GA0LDQtA!5e1!3m2!1ssr!2srs!4v1771768141394!5m2!1ssr!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-lg-4 text-center">
+                <p><b>Naša adresa</b></p> <br>
+                <p>Stevana Lukovića 2, Beograd, Srbija</p> <br>
+                <p>Drugi sprat, kancelarija u stanu broj 7</p>
+            </div>
+        </div>
     </div>
+    <br>
 
     <!--footstart-->
     <footer>
@@ -80,7 +134,7 @@
                 </div>
                 <div class="footer-column">
                     <h4>Kontakt</h4>
-                    <a href="kontakt.html" class="footer-link">Korisnička podrška</a> <br>
+                    <a href="kontakt.html" class="footer-link active">Korisnička podrška</a> <br>
                     <a href="faq.html" class="footer-link">FAQ</a> <br>
                     <a href="https://x.com/bethesda" class="footer-link">Twitter</a> <br>
                     <a href="https://www.youtube.com/@bethesda" class="footer-link">Youtube</a> <br>
@@ -99,5 +153,15 @@
         </div>
     </footer>
     <!--foootend-->
+    <script>
+        function prikaziSelekciju(indeks){
+            var idIzbora = "selekcija" + indeks;
+            var tekstIzbora = document.getElementById(idIzbora);
+            var dugme = document.getElementById("dropdaun");
+
+            console.log(idIzbora);
+            dugme.innerText = tekstIzbora.innerText;
+        }
+    </script>
 </body>
 </html>

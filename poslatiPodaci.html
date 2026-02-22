@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <script src="boostrap/bootstrap.js"></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!--Navstart-->
     <nav class="navbar navbar-expand-lg navigacija">
         <div class="container-fluid">
@@ -22,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Početna</a>
+                        <a class="nav-link" href="index.html">Početna</a>
                     </li>
                     <li class="nav-item">
                        <a href="igre.html" class="nav-link">Igre</a>
                     </li>
                     <li class="nav-item">
-                       <a href="galerija.html" class="nav-link">Galerija</a>
+                       <a href="galerija.html" class="nav-link" aria-current="page">Galerija</a>
                     </li>
                     <li class="nav-item">
                        <a href="faq.html" class="nav-link">FAQ</a>
@@ -55,61 +55,13 @@
     <!--Navend-->
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Mapa Sajta</h2>
-            </div>
-            <div class="col-lg-12">
-                <h5>Ovako je struktuiran naš sajt:</h5>
-                <pre>
-                    <a href="index.html" class="legalanLink">Početna</a>
-                       |
-                       + <a href="igre.html" class="legalanLink">Igre</a>
-                       |   |
-                       |   + <a href="tes1.html" class="legalanLink">The Elder Scrolls: Arena</a>
-                       |   |
-                       |   + <a href="tes2.html" class="legalanLink">The Elder Scrolls 2: Daggerfall</a>
-                       |   |
-                       |   + <a href="tes3.html" class="legalanLink">The Elder Scrolls 3: Morrowind</a>
-                       |   |
-                       |   + <a href="tes4.html" class="legalanLink">The Elder Scrolls 4: Oblivion</a>
-                       |   |
-                       |   + <a href="tes5.html" class="legalanLink">The Elder Scrolls 5: Skyrim</a>
-                       |   |
-                       |   L <a href="tes6.html" class="legalanLink">The Elder Scrolls 6: Hammerfell</a>
-                       |
-                       + <a href="galerija.html" class="legalanLink">Galerija</a>
-                       |
-                       + <a href="faq.html" class="legalanLink">FAQ</a>
-                       |
-                       + <a href="onama.html" class="legalanLink">O nama</a>
-                       |
-                       + <a href="cart.html" class="legalanLink">Vaša korpa</a>
-                       |     |
-                       |     + <a href="uspesnaKupovina.html" class="legalanLink">Uspešna kupovina</a> --|
-                       |                          |
-                       + <a href="nalog.html" class="legalanLink">Korisnički nalog</a> <-------|
-                       |        |
-                       |        + downloads
-                       |        |      |
-                       |        |      + <a href="downloads/tes3.txt" class="legalanLink">tes3.txt</a>
-                       |        |      |
-                       |        |      L <a href="downloads/tes1.txt" class="legalanLink">tes1.txt</a>
-                       |        |
-                       |        L <a href="racun.html" class="legalanLink">Fiskalni Račun</a>
-                       |
-                       + <a href="mapasajta.html" class="legalanLink">Mapa Sajta</a> <i>(Ovde se nalazite)</i>
-                       |
-                       L <a href="kontakt.html" class="legalanLink">Korisnička podrška</a>
-                                 |
-                                 L <a href="poslatiPodaci.html" class="legalanLink">Potvrda o poslatim podacima</a>
-                </pre>
-            </div>
+        <div class="col-lg-12">
+            <p>Vaši podaci su poslati! Očekujte odgovor u sledećih 24 sata, naš tim radi 8-16h CET da vam pruži pomoć. Za to vreme pogledajte <a href="igre.html" class="legalanLink">naš katalog</a>, možda ste propustili najnoviju igru!</p>
         </div>
     </div>
 
     <!--footstart-->
-    <footer>
+    <footer class="py-3 mt-auto w-100">
         <div class="footer-container">
             <div class="footer-columns">
                 <div class="footer-column">
@@ -125,7 +77,7 @@
                     <h4>Sekcija za korisnike</h4>
                     <a href="nalog.html" class="footer-link">Korisnički nalog</a> <br>
                     <a href="cart.html" class="footer-link">Korpa</a> <br>
-                    <a href="mapasajta.html" class="footer-link active">Mapa Sajta</a> <br>
+                    <a href="mapasajta.html" class="footer-link">Mapa Sajta</a> <br>
                     <a href="faq.html" class="footer-link">FAQ</a>
                 </div>
                 <div class="footer-column">
